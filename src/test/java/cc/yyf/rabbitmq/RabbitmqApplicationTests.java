@@ -34,4 +34,9 @@ class RabbitmqApplicationTests {
         Map<String, Object>  map = (Map<String, Object>) rabbitTemplate.receiveAndConvert("queue_yyf");
         System.out.println(map);
     }
+
+    @Test
+    void send() {
+        rabbitTemplate.convertAndSend("exchange_yyf", "info", "15389237357");
+    }
 }
