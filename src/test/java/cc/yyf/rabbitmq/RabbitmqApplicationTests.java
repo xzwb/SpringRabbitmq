@@ -1,5 +1,6 @@
 package cc.yyf.rabbitmq;
 
+
 import org.junit.jupiter.api.Test;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,4 +40,6 @@ class RabbitmqApplicationTests {
     void send() {
         rabbitTemplate.convertAndSend("exchange_yyf", "info", "15389237357");
     }
+
+
 }
